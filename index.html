@@ -36,6 +36,15 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* NEW: Styling for the Welcome Message */
+        .welcome-message {
+            color: var(--iocl-blue);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
         h1 {
             color: var(--iocl-blue);
             margin-bottom: 40px;
@@ -89,12 +98,20 @@
                 text-align: center;
                 padding: 0 10px;
             }
+            .welcome-message {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="header-bar"></div>
+    
+    <div class="welcome-message">
+        Welcome to **Indian Oil Pipelines Division**, Eastern Region Pipelines, Muzaffarpur
+    </div>
 
     <h1>Select Your Required Operations Tool</h1>
 
