@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Multi-Link Dashboard</title>
+    <title>IOCL Operations Tool Selector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* IOCL-themed Color Palette */
+        :root {
+            --iocl-red: #D02027;        /* Primary Red */
+            --iocl-dark-red: #B0181D;   /* Darker Red for Hover */
+            --iocl-blue: #004b90;       /* Corporate Blue */
+            --iocl-bg: #F7F7F7;         /* Light Background */
+            --iocl-text: #333333;       /* Dark Text */
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f9;
+            background-color: var(--iocl-bg);
+            transition: background-color 0.5s;
         }
+
+        /* Branding Bar at the top (A common IOCL design element) */
+        .header-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: var(--iocl-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
-            color: #333;
+            color: var(--iocl-blue);
             margin-bottom: 40px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
         }
+
         .button-container {
             display: flex;
-            gap: 20px;
+            gap: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* More prominent shadow */
         }
+
         .link-button {
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 18px 35px; /* Slightly larger padding */
+            min-width: 200px;
+            font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
             color: white;
-            background-color: #007bff;
+            background-color: var(--iocl-red); /* IOCL Red */
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         .link-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+            background-color: var(--iocl-dark-red); /* Darker Red on hover */
+            transform: translateY(-4px); /* More pronounced lift effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .link-button {
+                min-width: 250px;
+            }
+            h1 {
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Select Your Required Tool</h1>
+    <div class="header-bar"></div>
+
+    <h1>Select Your Required Operations Tool</h1>
 
     <div class="button-container">
         <a href="https://script.google.com/macros/s/AKfycbycGAHDimrh6lCNxq1rFU-JhwtmfBEGuPALVO21x5Z0T3g_Cu50BOyqRzCjH_QH0lbSgQ/exec" target="_blank" class="link-button">
-            Analysis (IOCL)
+            📊 Analysis (IOCL)
         </a>
 
         <a href="https://script.google.com/macros/s/AKfycbwsi8mWwdAJlvINjGDyQEQ5fPqNbp7_GF4ykMN9ktJHkC8Wd9SSgHO2iShCf9ustGJt/exec" target="_blank" class="link-button">
-            Technicians Log Book
+            📘 Technicians Log Book
         </a>
     </div>
 
